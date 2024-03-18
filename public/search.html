@@ -1,0 +1,175 @@
+<!-- --------------------------------->
+<!------------------------------------>
+<!------------------------------------>
+<!---------------------- Note -------->
+<!-- Responsive di layar lebar -->
+<!------------------------------------>
+<!------------------------------------>
+<!------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light pt-3">
+    <div class="container">
+      <img src="icon/Rectangle 74.svg" alt="">
+    <!-- Btn hamburger  navbar -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <!-- end btn hamburger -->
+      <!-- Offcanvas -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <p id="body-24-bold" class="fw-bold">BCR</p>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+            <ul>
+              <li>
+                <a href="#our-service" id="body-14-regular">Our Services</a>
+              </li>
+              <li>
+                <a href="#why-us" id="body-14-regular">Why Us</a>
+              </li>
+              <li>
+                <a href="#testimonial-section" id="body-14-regular">Testimonial</a>
+              </li>
+              <li>
+                <a href="#FAQ" id="body-14-regular">FAQ</a>
+              </li>
+              <li>
+                <a class="btn btn-success" id="body-14-bold" style="border-radius: 2px;" href="">Register</a>
+              </li>
+            </ul>
+          </div>
+      <!-- Offcanvas -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#our-service" id="body-14-regular">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#why-us" id="body-14-regular">Why Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonial-section" id="body-14-regular">Testimonial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#FAQ" id="body-14-regular">FAQ</a>
+          </li>
+          <li>
+            <a class="btn btn-success" id="body-14-bold" style="border-radius: 2px;" href="">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end Navbar -->
+    <section id="heroes">
+  <!-- Section main -->
+    <div class="container">
+      <div class="row flex-lg-row align-items-center g-5 pb-1 pt-4">
+        <div class="col-lg-6 ">
+          <h2>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h2>
+          <p id="body-14-light">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+          <div>
+            
+            <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> -->
+          </div>
+        </div>
+        <div class="col-10 col-sm-8 col-lg-6" id="car-img-wrapper">
+          <img id="img_car" src="images/mercy.png"  alt="Bootstrap Themes">
+        </div>   
+      </div>
+    </div>
+    </section>
+  <!-- end main section -->
+  <!-- search section -->
+  <section>
+    <div class="container" id="input-form-filter-car">
+        <div class="row mx-auto">
+            <div class="col-3 my-3"> 
+                <label for="driver-type"><small>Tipe Driver</small></label>
+                <select class="form-select" aria-label="Default select example" id="driver-type">
+                    <option value="default" selected>Pilih Tipe Driver</option>
+                    <option value="true">Dengan supir</option>
+                    <option value="false">Tanpa supir</option>
+                </select>
+            </div>
+            <div class="col-2 my-3"> 
+                <label for="start-date"><small>Tanggal</small></label>
+                <input id="start-date" class="form-control" type="date"/>
+            </div>
+            <div class="col-2 my-3"> 
+                <label for="pick-up-time"><small>Waktu Jemput/ambil</small></label>
+                <select class="form-select" aria-label="Default select example" id="pick-up-time">
+                    <option selected value="false">Pilih waktu</option>
+                    <option value="08:00">08.00 WIB</option>
+                    <option value="09:00">09.00 WIB</option>
+                    <option value="10:00">10.00 WIB</option>
+                    <option value="11:00">11.00 WIB</option>
+                    <option value="12:00">12.00 WIB</option>
+                  </select>
+            </div>
+            <div class="col-3 my-3"> 
+                <label for="passenger-num"><small>Jumlah Penumpang (optional)</small></label>
+                <input type="number" id="passenger-num" class="form-control">
+            </div>
+            <div class="col-2 my-4"> 
+                <button type="submit" id="load-btn" class="btn btn-success my-3">Cari Mobil</button>
+            </div>
+        </div>
+    </div>
+   </section>
+   <div class="cars-container"></div>
+  <!-- End Search section -->
+  <section>
+    <div class="container">
+      <!-- cards group section -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="card-search">
+         <!-- card will be render here-->
+        </div>
+      <!-- End Cards group Section -->
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container mb-3">
+      <div class="row justify-content-between">
+        <div class="col-md-3">
+          <p id="body-14-light">Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+          <p id="body-14-light">binarcarrental@gmail.com</p>
+          <p id="body-14-light">081-233-334-808</p>
+        </div>
+        <div class="col-md-2">
+          <p id="body-14-regular">Our services</p>
+          <p id="body-14-regular">Why Us</p>
+          <p id="body-14-regular">Testimonial</p>
+          <p id="body-14-regular">FAQ</p>
+        </div>
+        <div class="col-md-3">
+          <p id="body-14-light">Connect with us</p>
+          <img src="assets/icon/list item.svg" alt="">
+        </div>
+        <div class="col-md-2">
+          <p id="body-14-light">Copyright Binar 2022</p>
+          <img src="assets/icon/Rectangle 74.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./scripts/binar.js"></script>
+  <script type="text/javascript" src="./scripts/app.example.js"></script>
+  <script type="text/javascript" src="./scripts/car.example.js"></script>
+  <script type="text/javascript" src="./scripts/main.example.js"></script>
+  <script src="/server/script.js"></script>
+</body>
+</html>
