@@ -1,19 +1,13 @@
-const fs = require("fs");
 const express = require("express");
+const path = require("path");
+const PUBLIC_DIRECTORY = path.join(__dirname, "./public");
 
-const router = express.Router();
-const PORT = 8000;
-const cars = JSON.parse(fs.readFileSync(`${__dirname}/../data/cars.json`))
-
+const routeCars = require("./router/carsRouter")
 const app = express();
+app.use(express.static(PUBLIC_DIRECTORY))
 app.use(express.json());
-const getAllCarsData = (req, res) => {
-    req.status(200).json({
-        status: "success",
-        totalData : cars.length,
-        data: {
-            cars,
-        }
-    })
-}
-app.get("/api/v1/cars", getAllCarsData)
+
+app.use("/api/", routeCars.router)
+app.use("/", routeCars.defaultRoute)
+
+module.exports = app;
